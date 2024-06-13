@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 , minimum-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Todo List</title>
+</head>
+
+<body>
+    <div id="container">
+
+        <h1>Todo List</h1>
+
+        <div id="input-container">
+            <div id="input-area">
+                <div class="img">
+                    <i class="fa-regular fa-note-sticky fa-xl"></i>
+                </div>
+                <input id="task-name" type="text" placeholder="Type your todo list">
+                <div id="add-button" class="img">
+                    <i class="fa-solid fa-circle-plus fa-xl"></i>
+                </div>
+            </div>
+
+            <div class="action-box">
+                <div id="Complete-all-tasks"><span><i class="fa-solid fa-check-double"></i></span>Complete all tasks
+                </div>
+                <div id="clear-completed">Clear Completed</div>
+            </div>
+        </div>
+
+        <div id="tasks-container"></div>
+
+        <div class="action-box">
+            <div id="tasks-left"></div>
+            <div class="status-clicks">
+                <div id="All">All</div>
+                <div id="Uncomplete">Uncomplete</div>
+                <div id="Completed">Completed</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
