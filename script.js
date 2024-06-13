@@ -21,7 +21,6 @@ function taskAddition() {
 }
 
 function displayTaskContainer(type) {
-  console.log(todoDataUncomplete);
   taskContainerElement.innerHTML = "";
   switch (type) {
     case "Uncomplete":
@@ -82,7 +81,6 @@ function displayTaskContainer(type) {
           .addEventListener("click", () => removeTask(index));
         image.querySelector(".tick-button").addEventListener("click", () => {
           todoCompleted.push(todoDataUncomplete[index]);
-          console.log(todoCompleted);
           removeTask(index);
         });
       });
@@ -193,7 +191,6 @@ function displayTaskContainer(type) {
           .addEventListener("click", () => removeTask(index));
         image.querySelector(".tick-button").addEventListener("click", () => {
           todoCompleted.push(todoDataUncomplete[index]);
-          console.log(todoCompleted);
           removeTask(index);
         });
       });
@@ -285,10 +282,8 @@ clearCompletedElement.addEventListener("click", () => {
 
 completeAllTasks.addEventListener("click", () => {
   if (todoDataUncomplete.length > 0) {
-    console.log(todoCompleted + ", " + todoDataUncomplete);
     todoCompleted = [...todoCompleted, ...todoDataUncomplete];
     todoDataUncomplete = [];
-    console.log(todoCompleted);
     updateTasksLeft();
     displayTaskContainer("Uncomplete");
   } else {
